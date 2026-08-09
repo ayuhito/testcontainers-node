@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/testcontainers/testcontainers-node/issues"
   },
+  "type": "commonjs",
   "main": "build/index.js",
   "files": [
     "build"
@@ -25,14 +26,17 @@
     "access": "public"
   },
   "scripts": {
-    "prepack": "shx cp ../../../README.md . && shx cp ../../../LICENSE .",
-    "build": "tsc --project tsconfig.build.json"
+    "prepack": "shx cp ../../../README.md . && shx cp ../../../LICENSE ."
   },
   "devDependencies": {
     "@types/selenium-webdriver": "^4.35.6",
+    "@types/tar-fs": "^2.0.4",
+    "@types/tmp": "^0.2.6",
     "selenium-webdriver": "^4.46.0"
   },
   "dependencies": {
-    "testcontainers": "^12.1.0"
+    "tar-fs": "^3.1.3",
+    "testcontainers": "^12.1.0",
+    "tmp": "^0.2.7"
   }
 }

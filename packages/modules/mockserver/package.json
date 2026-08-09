@@ -3,9 +3,9 @@
   "version": "12.1.0",
   "description": "Mockserver module for Testcontainers",
   "main": "build/index.js",
+  "type": "commonjs",
   "scripts": {
-    "prepack": "shx cp ../../../README.md . && shx cp ../../../LICENSE .",
-    "build": "tsc --project tsconfig.build.json"
+    "prepack": "shx cp ../../../README.md . && shx cp ../../../LICENSE ."
   },
   "repository": {
     "type": "git",

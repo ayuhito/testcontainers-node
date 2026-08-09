@@ -1,8 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "exclude": [
-    "build",
-    "src/**/*.test.ts",
-    "src/utils/test-helper.ts",
-  ]
-}

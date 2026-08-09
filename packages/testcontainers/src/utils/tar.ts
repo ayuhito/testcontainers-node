@@ -1,4 +1,4 @@
-import type { TarSource } from "modern-tar/fs";
+import { packTar, type TarSource } from "modern-tar/fs";
 import { readdir, realpath } from "node:fs/promises";
 import { join, posix } from "node:path";
 import { Readable } from "node:stream";
@@ -12,8 +12,7 @@ interface CreateTarOptions {
 }
 
 export async function createTar({ files = [], directories = [], contents = [] }: CreateTarOptions): Promise<Readable> {
-  const [{ packTar }, fileSources, directorySources] = await Promise.all([
-    import("modern-tar/fs"),
+  const [fileSources, directorySources] = await Promise.all([
     Promise.all(
       files.map(async ({ source, target, mode }) => ({
         type: "file" as const,

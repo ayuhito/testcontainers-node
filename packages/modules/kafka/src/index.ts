@@ -1,1 +1,2 @@
-export { KafkaContainer, SaslSslListenerOptions, StartedKafkaContainer } from "./kafka-container";
+export { KafkaContainer, StartedKafkaContainer } from "./kafka-container";
+export type { SaslSslListenerOptions } from "./kafka-container";

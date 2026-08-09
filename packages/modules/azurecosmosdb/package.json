@@ -19,6 +19,7 @@
   "bugs": {
     "url": "https://github.com/testcontainers/testcontainers-node/issues"
   },
+  "type": "commonjs",
   "main": "build/index.js",
   "files": [
     "build"
@@ -27,8 +28,7 @@
     "access": "public"
   },
   "scripts": {
-    "prepack": "shx cp ../../../README.md . && shx cp ../../../LICENSE .",
-    "build": "tsc --project tsconfig.build.json"
+    "prepack": "shx cp ../../../README.md . && shx cp ../../../LICENSE ."
   },
   "devDependencies": {
     "@azure/cosmos": "^4.10.0"

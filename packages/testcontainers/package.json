@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/testcontainers/testcontainers-node/issues"
   },
+  "type": "commonjs",
   "main": "build/index.js",
   "files": [
     "build"
@@ -25,9 +26,7 @@
     "access": "public"
   },
   "scripts": {
-    "prebuild": "node -p \"'export const LIB_VERSION = ' + JSON.stringify(require('./package.json').version) + ';'\" > src/version.ts",
-    "prepack": "shx cp ../../README.md . && shx cp ../../LICENSE .",
-    "build": "tsc --project tsconfig.build.json"
+    "prepack": "shx cp ../../README.md . && shx cp ../../LICENSE ."
   },
   "dependencies": {
     "@balena/dockerignore": "^1.0.2",
